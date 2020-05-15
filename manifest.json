@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Youtube Play Current",
+    "description": "Play only active Youtube tab, previous videos will be stopped",
+    "version": "1.0.0",
+    "minimum_chrome_version": "38",
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "content_scripts": [{ 
+        "matches": ["http://*.youtube.com/*", "https://*.youtube.com/*"],
+        "js": [ "content.js"]
+    }],
+    "icons": {
+        "16": "assets/icon.png"
+    },
+    "background": {"page": "background.html"}
+}
